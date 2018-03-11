@@ -14,7 +14,11 @@ class RockPaperScissors < Sinatra::Base
 
   get '/play' do
     @player = session[:player_name]
-    "Hey #{@player}! Welcome to RPS"
+    erb(:play)
+  end
+
+  post '/result' do
+    'This is the result page'
   end
 
   run! if app_file == $0
