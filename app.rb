@@ -15,33 +15,33 @@ class RockPaperScissors < Sinatra::Base
   end
 
   get '/play' do
-    $game = RPSGame.new(Player.new(session[:player_name]))
+    @game = RPSGame.create(Player.new(session[:player_name]))
     erb(:play)
   end
 
   post '/rock_choice' do
-    @game = $game
+    @game = RPSGame.instance
     session[:choice] = "rock"
     @game.player_1.move = session[:choice]
     redirect('result')
   end
 
   post '/paper_choice' do
-    @game = $game
+    @game = RPSGame.instance
     session[:choice] = "paper"
     @game.player_1.move = session[:choice]
     redirect('result')
   end
 
   post '/scissors_choice' do
-    @game = $game
+    @game = RPSGame.instance
     session[:choice] = "scissors"
     @game.player_1.move = session[:choice]
     redirect('result')
   end
 
   get '/result' do
-    @game = $game
+    @game = RPSGame.instance
     @result = @game.play_rps
     erb(:result)
   end

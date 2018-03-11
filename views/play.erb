@@ -5,8 +5,8 @@
     body {
         background-color: black;
     }
-    h1  {color: gold; font-family: Impact}
-    h2  {color: gold; font-family: Impact}
+    h1  {color: gold; font-family: Impact; font-size: 80px}
+    h2  {color: gold; font-family: Impact; font-size: 60px}
 
     div.header {
         text-align: center;
@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="header">
-      <h1><%="Hey #{$game.player_1.name}! Let's play RPS!!!"%></h1>
+      <h1><%="Hey #{@game.player_1.name}! Let's play RPS!!!"%></h1>
       <h2>You will be playing against the RPS computer!!!</h2>
       <h2>What's your move???</h2>
       <form action="rock_choice" method="post">

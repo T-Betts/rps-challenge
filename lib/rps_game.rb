@@ -7,6 +7,14 @@ class RPSGame
     @player_2 = player_2
   end
 
+  def self.create(player_1)
+    @game = RPSGame.new(player_1)
+  end
+
+  def self.instance
+    @game
+  end
+
   def computer_move
     ["Rock", "Paper", "Scissors"].sample
   end
@@ -18,7 +26,7 @@ class RPSGame
   def player_2_move
     player_2_move = @player_2.move = computer_move.downcase
   end
-  
+
   def play_rps
     case [player_1_move, player_2_move]
       when ["rock", "scissors"], ["paper", "rock"], ["scissors", "paper"]
