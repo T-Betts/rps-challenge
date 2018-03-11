@@ -11,21 +11,34 @@
     div.header {
         text-align: center;
     }
+
+    .button {
+    background-color: gold;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    }
     </style>
   </head>
   <body>
     <div class="header">
-      <h1><%="Hey #{@player}! Let's play RPS!!!"%></h1>
+      <h1><%="Hey #{$game.player_1.name}! Let's play RPS!!!"%></h1>
       <h2>You will be playing against the RPS computer!!!</h2>
       <h2>What's your move???</h2>
       <form action="rock_choice" method="post">
-        <input type="submit" value="Rock"/>
+        <input type="submit" class="button" value="Rock"/>
       </form>
       <form action="paper_choice" method="post">
-        <input type="submit" value="Paper"/>
+        <input type="submit" class="button" value="Paper"/>
       </form>
       <form action="scissors_choice" method="post">
-        <input type="submit" value="Scissors"/>
+        <input type="submit" class="button" value="Scissors"/>
       </form>
     </div>
   </body>

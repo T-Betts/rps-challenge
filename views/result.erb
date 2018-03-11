@@ -1,1 +1,6 @@
-<h1><%=@choice%></h1>
+<h1>You chose <%=@game.player_1.move.capitalize%></h1>
+<h1>The RPS Computer chose <%=@game.player_2.move%></h1>
+<h1><%=@result%></h1>
+<form action="play" method="get">
+  <input type="submit" value="Next round"/>
+</form>
