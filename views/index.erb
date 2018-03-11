@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+          background-color: black;
+          background-image: url("https://www.esquireme.com/sites/default/files/styles/full_img/public/images/2017/05/29/rock_paper_scissors__2x.png?itok=jFv2T0kr");
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-position: center;
+      }
+
+      h1  {color: gold; font-style: Impact}
+
+      div.header {
+          text-align: center;
+          h1  {color: gold; font-style: Impact}
+      }
+      div.button {
+          text-align: center;
+          margin-top: 80px;
+      }
+    </style>
+  </head>
+<body>
+  <div class="header">
+    <h1>Welcome to Rock, Paper, Scissors!!!</h1>
+  </div>
+  <div class="button">
+    <form action="play" method="post">
+      <label for='Player_1' font-style="Impact">
+        ENTER NAME AND HIT START
+        <input type="text" name="Player_1"/>
+      </label>
+      <input type="submit" value="Start"/>
+    </form>
+  </div>
+</body>
+</html>
