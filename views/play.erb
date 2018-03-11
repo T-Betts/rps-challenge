@@ -1,6 +1,32 @@
-<h1><%="Hey #{@player}! Welcome to RPS"%></h1>
-<form action="result" method="post">
-  <input type="submit" value="Rock"/>
-  <input type="submit" value="Paper"/>
-  <input type="submit" value="Scissors"/>
-</form>
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    body {
+        background-color: black;
+    }
+    h1  {color: gold; font-family: Impact}
+    h2  {color: gold; font-family: Impact}
+
+    div.header {
+        text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1><%="Hey #{@player}! Let's play RPS!!!"%></h1>
+      <h2>You will be playing against the RPS computer!!!</h2>
+      <h2>What's your move???</h2>
+      <form action="rock_choice" method="post">
+        <input type="submit" value="Rock"/>
+      </form>
+      <form action="paper_choice" method="post">
+        <input type="submit" value="Paper"/>
+      </form>
+      <form action="scissors_choice" method="post">
+        <input type="submit" value="Scissors"/>
+      </form>
+    </div>
+  </body>
+</html>

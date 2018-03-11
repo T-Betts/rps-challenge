@@ -4,7 +4,7 @@ require_relative './web_helpers.rb'
 feature 'Entering player name' do
   scenario 'Can enter player name and see them on screen' do
     sign_in_and_play
-    expect(page).to have_content('Hey Tom! Welcome to RPS')
+    expect(page).to have_content("Hey Tom! Let's play RPS" )
   end
 end
 
